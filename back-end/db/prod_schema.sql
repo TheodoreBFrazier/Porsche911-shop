@@ -2,5 +2,10 @@ DROP TABLE IF EXISTS porsches;
 
 CREATE TABLE porsches (
     id SERIAL PRIMARY KEY, 
-    name TEXT
+    model TEXT, 
+    year INTEGER,
+    color TEXT,
+    generation INTEGER,
+    price INTEGER,
+    is_new BOOLEAN
 );
