@@ -3,9 +3,9 @@ CREATE DATABASE cta_dev;
 
 \c cta_dev;
 
-DROP TABLE IF EXISTS test;
+DROP TABLE IF EXISTS porsches;
 
-CREATE TABLE test (
+CREATE TABLE porsches (
     id SERIAL PRIMARY KEY, 
     name TEXT
 );
