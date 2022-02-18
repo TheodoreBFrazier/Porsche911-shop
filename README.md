@@ -1,4 +1,4 @@
-# PERN Final Project Template
+# PERN Final Project Template!
 
 - select `use this template`
 - clone this repo
