@@ -1,11 +1,16 @@
-DROP DATABASE IF EXISTS cta_dev;
-CREATE DATABASE cta_dev;
+DROP DATABASE IF EXISTS porsche_dev;
+CREATE DATABASE porsche_dev;
 
-\c cta_dev;
+\c porsche_dev;
 
 DROP TABLE IF EXISTS porsches;
 
 CREATE TABLE porsches (
-    id SERIAL PRIMARY KEY, 
-    name TEXT
+        id SERIAL PRIMARY KEY, 
+    model TEXT, 
+    year INTEGER,
+    color TEXT,
+    generation INTEGER,
+    price INTEGER,
+    is_new BOOLEAN
 );
