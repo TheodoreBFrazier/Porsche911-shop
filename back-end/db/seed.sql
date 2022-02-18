@@ -1,6 +1,6 @@
 \c porsche_dev;
 
-INSERT INTO porsches (model, year, color, generation,  feature, price, is_new) VALUES
+INSERT INTO porsches (model, year, color, generation, price, feature,  is_new) VALUES
 ('911 Carrera', 2000, 'Silver', 996, 37000, 'rear wheel drive', false),
 ('911 Targa', 2022, 'Red', 992, 102000, 'Glass roof', true),
 ('911 Cabriolet', 1998, 'White', 993, 57000, 'convertible', false),

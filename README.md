@@ -1,6 +1,6 @@
 # PERN Final Project Template!
 
-This is a app devoted to the best car in the world. The Porsche 911. 
+This is a app devoted to the best car in the world. The Porsche 911!
 
 - select `use this template`
 - clone this repo

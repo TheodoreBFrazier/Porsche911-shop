@@ -8,7 +8,7 @@ porsches.get("/", async (request, response) => {
         if(allPorsches[0]){
             response.status(200).json(allPorsches);
         } else {
-            response.status(500).json({erro: "server error"})
+            response.status(500).json({error: "server error"})
         }
     } catch (error) {
         console.log(error)

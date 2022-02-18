@@ -1,6 +1,7 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
+const porscheController = require("./Controllers/porscheController");
 
 // CONFIGURATION
 const app = express();
@@ -14,19 +15,13 @@ app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
 
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
-const db = require("./db/dbConfig.js");
+app.use("/porsches", porscheController);
 
-app.get("/porsches", async (req, res) => {
-  try {
-    const allPorsches = await db.any("SELECT * FROM porsches");
-    res.json(allPorsches);
-  } catch (err) {
-    res.json(err);
-  }
+app.get("*", (req, res) => {
+  res.status(404).send("Page not found");
 });
+
+
 
 // EXPORT
 module.exports = app;
