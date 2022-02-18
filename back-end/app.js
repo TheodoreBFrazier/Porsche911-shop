@@ -28,9 +28,5 @@ app.get("/porsches", async (req, res) => {
   }
 });
 
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
-
 // EXPORT
 module.exports = app;
