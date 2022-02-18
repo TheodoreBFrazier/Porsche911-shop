@@ -19,10 +19,10 @@ app.get("/", (req, res) => {
 /////////////////////////////////////
 const db = require("./db/dbConfig.js");
 
-app.get("/test", async (req, res) => {
+app.get("/porsches", async (req, res) => {
   try {
-    const allDays = await db.any("SELECT * FROM porsches");
-    res.json(allDays);
+    const allPorsches = await db.any("SELECT * FROM porsches");
+    res.json(allPorsches);
   } catch (err) {
     res.json(err);
   }
