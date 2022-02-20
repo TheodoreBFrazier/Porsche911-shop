@@ -6,6 +6,7 @@ CREATE DATABASE porsche_dev;
 CREATE TABLE porsches (
     id SERIAL PRIMARY KEY, 
     model TEXT, 
+    image TEXT,
     year INTEGER,
     color TEXT,
     generation INTEGER,
