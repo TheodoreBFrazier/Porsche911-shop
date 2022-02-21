@@ -7,7 +7,7 @@ export default function NavBar() {
                 <Link to="/porsches">Porsches!</Link>
             </h1>
             <button>
-                <Link to="/porsches/sell">Sell Your Porsche!!!</Link>
+                <Link to="/porsches/new">Sell Your Porsche!!!</Link>
             </button>
         </nav>
     )
