@@ -2,6 +2,7 @@
 const cors = require("cors");
 const express = require("express");
 const porscheController = require("./Controllers/porscheController");
+const genController = require("./Controllers/genController")
 
 // CONFIGURATION
 const app = express();
@@ -16,6 +17,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/porsches", porscheController);
+
+app.use("/generations", genController)
 
 app.get("*", (req, res) => {
   res.status(404).send("Page not found");
