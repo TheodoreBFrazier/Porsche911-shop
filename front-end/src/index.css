@@ -18,8 +18,11 @@ code {
     monospace;
 }
 
+
 .Home img {
+  position: absolute;
   width: 100vw;
+  z-index: -1;
 }
 
 

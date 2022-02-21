@@ -14,3 +14,14 @@ CREATE TABLE porsches (
     feature TEXT,
     is_new BOOLEAN
 );
+
+DROP TABLE IF EXISTS generations:
+
+CREATE TABLE generation (
+   id SERIAL PRIMARY KEY, 
+   generation TEXT,
+   image TEXT,
+   beganProd INTEGER,
+   endedProd INTEGER,
+   description TEXT    
+)
