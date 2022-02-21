@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 // IMPORT THE PAGES
 
 import Home from "./Pages/Home"
+import Index from "./Pages/Index"
 import New from "./Pages/New"
 import Generations from "./Pages/Generations"
 
@@ -17,6 +18,7 @@ function App() {
         <main>
           <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/porsches" element={<Index />} />
           <Route path="/porsches/new" element={<New />} />
           <Route path="porsches/generations" element={<Generations />} />
           </Routes>
