@@ -4,7 +4,7 @@ import { userNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
-function sellPorscheForm() {
+function SellPorscheForm() {
     let navigate = userNavigate
 
     const [porsche, setPorsche] = useState({
@@ -84,4 +84,4 @@ function sellPorscheForm() {
 
 } 
 
-export default sellPorscheForm;
+export default SellPorscheForm;

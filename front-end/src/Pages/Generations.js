@@ -1,7 +1,9 @@
 function Generations () {
     return (
-        <div classNamr = "Generations">
+        <div className = "Generations">
             <h1>All the porsches!</h1>
         </div>
     )
 }
+
+export default Generations;
