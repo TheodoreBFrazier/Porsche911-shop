@@ -3,8 +3,8 @@ import SellPorscheForm from "../Components/SellPorscheForm";
 function New() {
     return (
         <div className="New">
-            <h2>Need to part with your Porsche 911?</h2>
-            <p>We know it's tough to part with your beloved Porsche 911, but enter the information about your car and we will find it a new home!</p>
+            <img src="https://nuvomagazine.scdn2.secure.raxcdn.com/wp-content/uploads/2020/06/2020-Porsche-911-Carrera-4S-Side-Profile-scaled.jpg" alt="a carrera 4s"
+/>            SELL! 
             <SellPorscheForm />
         </div>
     )
