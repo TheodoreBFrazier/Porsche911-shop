@@ -47,7 +47,7 @@ function SellPorscheForm() {
                     type="text"
                     onChange={handleTextChange}
                 />
-
+<br />
                 <label htmlFor="image">Add an Image</label>
                 <input
                     id="image"
@@ -56,7 +56,7 @@ function SellPorscheForm() {
                     placeholder="Image link"
                     onChange={handleTextChange}
                 />
-
+<br />
                 <label htmlFor="year">Year of production</label>
                 <input
                     id="year"
@@ -64,7 +64,7 @@ function SellPorscheForm() {
                     placeholder="yyyy"
                     onChange={handleTextChange}
                 />
-
+<br />
                 <label htmlFor="color">Car Color</label>
                 <input
                     id="color"

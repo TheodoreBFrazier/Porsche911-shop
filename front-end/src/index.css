@@ -17,3 +17,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Sell {
+  width: 400px;
+  background-color: green;
+}
+
+.Sell input[type=submit]:hover {
+  background-color: yellow;
+}
