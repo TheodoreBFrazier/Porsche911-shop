@@ -15,9 +15,9 @@ CREATE TABLE porsches (
     is_new BOOLEAN
 );
 
-DROP TABLE IF EXISTS generations:
+DROP TABLE IF EXISTS generations;
 
-CREATE TABLE generation (
+CREATE TABLE generations (
    id SERIAL PRIMARY KEY, 
    generation TEXT,
    image TEXT,
