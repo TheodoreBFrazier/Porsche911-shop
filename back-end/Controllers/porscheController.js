@@ -1,4 +1,3 @@
-const { response } = require("express");
 const express = require("express");
 const porsches = express.Router();
 const { getAllPorsches, getPorsche, createPorsche, deletePorsche } = require("../Queries/porsches")

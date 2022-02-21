@@ -1,5 +1,5 @@
 const express = require("express");
-const generations = express.Router
+const generations = express.Router();
 
 const { getAllGenerations } = require("../Queries/generations")
 
