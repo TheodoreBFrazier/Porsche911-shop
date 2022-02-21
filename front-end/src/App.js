@@ -15,9 +15,11 @@ function App() {
       <Router>
         <NavBar />
         <main>
+          <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/porsches/new" element={<New />} />
           <Route path="porsches/generations" element={<Generations />} />
+          </Routes>
         </main>
 
       </Router>
