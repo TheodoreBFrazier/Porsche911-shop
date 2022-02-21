@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useState } from "react"
-import { userNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
 function SellPorscheForm() {
-    let navigate = userNavigate
+    let navigate = useNavigate();
 
     const [porsche, setPorsche] = useState({
         model: "",

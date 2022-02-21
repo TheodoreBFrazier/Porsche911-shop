@@ -6,6 +6,9 @@ import Home from "./Pages/Home"
 import New from "./Pages/New"
 import Generations from "./Pages/Generations"
 
+
+import NavBar from "./Components/NavBar"
+
 function App() {
   return (
     <div className="App">

@@ -5,8 +5,8 @@ import { useEffect } from "react";
 const API = process.env.REACT_APP_API_URL;
 
 function PorscheEditForm() {
-    let { id } = useParams()
-    let navigate = userNavigate
+    let { id } = useParams();
+    let navigate = useNavigate();
 
     const [porsche, setPorsche] = useState({
         model: "",
