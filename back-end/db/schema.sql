@@ -5,14 +5,16 @@ CREATE DATABASE porsche_dev;
 
 CREATE TABLE porsches (
     id SERIAL PRIMARY KEY, 
-    model TEXT, 
+    name TEXT, 
     image TEXT,
     year INTEGER,
     color TEXT,
     generation INTEGER,
     price INTEGER,
-    feature TEXT,
-    is_new BOOLEAN
+    description TEXT,
+    featured BOOLEAN,
+    is_new BOOLEAN,
+    rating INTEGER
 );
 
 DROP TABLE IF EXISTS generations;
