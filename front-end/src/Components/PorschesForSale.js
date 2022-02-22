@@ -8,31 +8,31 @@ function Porsches() {
     const [porsches, setPorsches] = useState([]) //State of empty array
 
     useEffect(() => {
-        axios.get( APT + "/porsches")
-        .then((response) => {
-            setPorsches(response.data);
-        }).catch((error) => {
-            console.log(error)
-        })
+        axios.get(APT + "/porsches")
+            .then((response) => {
+                setPorsches(response.data);
+            }).catch((error) => {
+                console.log(error)
+            })
     }, [])
 
 
-return (
-    <div className="Available-porsche">
-        <section>
-            <table>
-                <thead>
-                    <th>Porsches for Sale!</th>
-                </thead>
-            </table>
-            <tbody>
-                {porsches.map((porsche) => {
-                    return <Porsche />
-                })}
-            </tbody>
-        </section>
-    </div>
-)
+    return (
+        <div className="Available-porsche">
+            <section>
+                <table>
+                    <thead>
+                        <th>Porsches for Sale!</th>
+                    </thead>
+                </table>
+                <tbody>
+                    {porsches.map((porsche) => {
+                        return <Porsche />
+                    })}
+                </tbody>
+            </section>
+        </div>
+    )
 
 
 }
