@@ -17,13 +17,3 @@ CREATE TABLE porsches (
     rating INTEGER
 );
 
-DROP TABLE IF EXISTS generations;
-
-CREATE TABLE generations (
-   id SERIAL PRIMARY KEY, 
-   generation TEXT,
-   image TEXT,
-   beganProd INTEGER,
-   endedProd INTEGER,
-   description TEXT    
-)

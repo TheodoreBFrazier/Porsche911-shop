@@ -4,9 +4,9 @@ const { getAllPorsches, getPorsche, createPorsche, deletePorsche } = require("..
 
 //REMEMBER TO RUN PSQL SEED AND SCHEMA COMMANDS!!!
 
-const generationsControllers = require("./genController")
+// // const generationsControllers = require("./genController")
 
-porsches.use("/:porsches/generations", generationsControllers)
+// porsches.use("/:porsches/generations", generationsControllers)
 
 porsches.get("/", async (request, response) => {
     try {
