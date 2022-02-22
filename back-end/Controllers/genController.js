@@ -1,7 +1,8 @@
 const express = require("express");
 const generations = express.Router();
-
 const { getAllGenerations } = require("../Queries/generations")
+
+
 
 generations.get("/", async (request, response) => {
     try {
@@ -12,8 +13,8 @@ generations.get("/", async (request, response) => {
             response.status(400).json({ error: "server error"});
         }
     } catch (error) {
-        console.lof(error)
-    }
+        console.log(error)
+}
 })
 
 module.exports = generations;

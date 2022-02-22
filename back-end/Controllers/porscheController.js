@@ -4,13 +4,17 @@ const { getAllPorsches, getPorsche, createPorsche, deletePorsche } = require("..
 
 //REMEMBER TO RUN PSQL SEED AND SCHEMA COMMANDS!!!
 
+const generationsControllers = require("./genController")
+
+porsches.use("/:porsches/generations", generationsControllers)
+
 porsches.get("/", async (request, response) => {
     try {
         const allPorsches = await getAllPorsches()
         if (allPorsches[0]) {
             response.status(200).json(allPorsches);
         } else {
-            response.status(500).json({ error: "server error" })
+            response.status(500).json({ error: "server error!" })
         }
     } catch (error) {
         console.log(error)

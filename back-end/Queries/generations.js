@@ -9,7 +9,7 @@ const getAllGenerations = async() => {
     }
 }
 
-module.export = {
-    getAllGenerations,
+module.exports = {
+    getAllGenerations
 }
     

@@ -18,7 +18,8 @@ app.get("/", (req, res) => {
 
 app.use("/porsches", porscheController);
 
-app.use("/generations", genController)
+app.use("/generations", genController);
+
 
 app.get("*", (req, res) => {
   res.status(404).send("Page not found");
