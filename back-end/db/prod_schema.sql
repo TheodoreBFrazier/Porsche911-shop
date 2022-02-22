@@ -1,29 +1,6 @@
-DROP DATABASE IF EXISTS porsche_dev;
-CREATE DATABASE porsche_dev;
+DROP TABLE IF EXISTS porsches;
 
-\c porsche_dev;
-
-CREATE TABLE porsches (
-    id SERIAL PRIMARY KEY, 
-    name TEXT, 
-    image TEXT,
-    year INTEGER,
-    color TEXT,
-    generation INTEGER,
-    price INTEGER,
-    description TEXT,
-    featured BOOLEAN,
-    is_new BOOLEAN,
-    rating INTEGER
-);
-
-DROP TABLE IF EXISTS generations;
-
-CREATE TABLE generations (
-   id SERIAL PRIMARY KEY, 
-   generation TEXT,
-   image TEXT,
-   beganProd INTEGER,
-   endedProd INTEGER,
-   description TEXT    
-)
+ CREATE TABLE porsches (
+     id SERIAL PRIMARY KEY, 
+     name TEXT
+ );
