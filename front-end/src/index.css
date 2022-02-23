@@ -61,3 +61,13 @@ code {
   width: 100vw;
   z-index: -1;
 }
+
+.porscheforsale img {
+margin: auto;
+  height: 300px;
+}
+
+.forsale-arr {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
