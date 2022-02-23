@@ -20,11 +20,6 @@ function PorschesForSale() {
     return (
         <div className="available-porsche">
             <section>
-                <table>
-                    <thead>
-                        <th>Porsches for Sale!</th>
-                    </thead>
-                </table>
                 <tbody className="forsale-arr">
                     {porsches.map((porsche) => {
                         return <Porsche4Sale key={porsche.id} porsche={porsche} />

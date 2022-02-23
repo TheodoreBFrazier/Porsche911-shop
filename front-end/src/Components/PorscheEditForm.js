@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect , useState } from "react";
 
 
 const API = process.env.REACT_APP_API_URL;
@@ -9,10 +9,11 @@ function PorscheEditForm() {
     let navigate = useNavigate();
 
     const [porsche, setPorsche] = useState({
-        model: "",
+        name: "",
         image: "",
         year: 0,
         color: "",
+        description: "",
     })
 
 
@@ -44,10 +45,10 @@ function PorscheEditForm() {
 
             <form onSubmit={handleSubmit}>
 
-                <label htmlFor="model">Model You're Selling</label>
+                <label htmlFor="name">Model You're Selling (911 Carerra, 911 Turbo, etc) </label>
                 <input
-                    id="model"
-                    value={porsche.model}
+                    id="name"
+                    value={porsche.name}
                     type="text"
                     onChange={handleTextChange}
                 />
@@ -74,6 +75,16 @@ function PorscheEditForm() {
                     id="color"
                     type="text"
                     placeholder="Color"
+                    onChange={handleTextChange}
+                />
+
+                <br />
+
+                <label htmlFor="description">Give a Short Description</label>
+                <input
+                    id="color"
+                    type="description"
+                    placeholder="Insert a Short Description"
                     onChange={handleTextChange}
                 />
 
