@@ -77,3 +77,15 @@ margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.Show {
+  margin: auto;
+  height: 900px;
+  width: 900px;
+}
+
+.Show img {
+  position: relative;
+  margin: auto;
+  height: 450px;
+}

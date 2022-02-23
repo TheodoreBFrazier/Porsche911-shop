@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect , useState } from "react";
+import { useParams, Link, useNavigate} from "react-router-dom"
 
 
 const API = process.env.REACT_APP_API_URL;
@@ -22,18 +23,23 @@ function PorscheEditForm() {
             .post(`${API}/porsches/${id}`, updatedPorsche)
             .then(
                 () => {
-                    navigate(`/porsches`);
+                    navigate(`/porsches/${id}`);
                 },
                 (error) => console.log(error)
             )
             .catch((c) => console.warn("catch", c))
     }
 
+    const handleTextChange = (event) => {
+        setPorsche({ ...porsche, [event.target.id]: event.target.value });
+      };
+    
+
     useEffect(() => {
         axios.get(`${API}/porsches/${id}`).then(
             (response) => setPorsche(response)
         ).catch(() => navigate("/no-porsche-found"))
-    }, [id]);
+    }, [id, navigate]);
 
 
     const handleSubmit = (event) => {
@@ -93,6 +99,9 @@ function PorscheEditForm() {
                 <input type="submit" />
 
             </form>
+            <Link to={`/porsches/${id}`}>
+                <button>Nevermind!</button>
+            </Link>
         </div>
     );
 

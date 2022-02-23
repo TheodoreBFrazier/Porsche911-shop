@@ -32,12 +32,10 @@ function PorscheDetails() {
             <div className="Show-porsche">
                 <h1>{porsche.year}&nbsp;&nbsp;{porsche.name}</h1>
                 <img src={porsche.image} alt={porsche.name} />
-                <span><h6>Color:&nbsp;</h6>{porsche.color}</span>
-                <span><h6>Generation:&nbsp;</h6>{porsche.generation}</span>
-                <span><h6>Description:&nbsp;</h6></span>
-                <span><h6>Rating:&nbsp;</h6>{porsche.rating}/5</span>
-                <br />
-                {porsche.description}
+                <h5>Color:&nbsp;{porsche.color}</h5>
+                <h5>Generation:&nbsp;{porsche.generation}</h5>
+                <h5>Rating:&nbsp;{porsche.rating}/5</h5>
+                <h3>{porsche.description}</h3>
 
                 <div className="Navigation">
                     <div>
