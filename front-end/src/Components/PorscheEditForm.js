@@ -1,6 +1,6 @@
 import axios from "axios";
-import { useEffect , useState } from "react";
-import { useParams, Link, useNavigate} from "react-router-dom"
+import { useEffect, useState } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom"
 
 
 const API = process.env.REACT_APP_API_URL;
@@ -32,8 +32,8 @@ function PorscheEditForm() {
 
     const handleTextChange = (event) => {
         setPorsche({ ...porsche, [event.target.id]: event.target.value });
-      };
-    
+    };
+
 
     useEffect(() => {
         axios.get(`${API}/porsches/${id}`).then(
@@ -52,31 +52,44 @@ function PorscheEditForm() {
             <form onSubmit={handleSubmit}>
 
                 <label htmlFor="name">Model You're Selling (911 Carerra, 911 Turbo, etc) </label>
+                <br />
+                <br />
                 <input
                     id="name"
                     value={porsche.name}
                     type="text"
                     onChange={handleTextChange}
                 />
-
+                <br />
+                <br />
                 <label htmlFor="image">Add an Image</label>
+                <br />
+                <br />
+                <br />
+                <br />
                 <input
                     id="image"
                     type="text"
-                    pattern="http[s]*//.+"
+                    pattern="http[s]*://.+"
                     placeholder="Image link"
                     onChange={handleTextChange}
                 />
-
+                <br />
+                <br />
                 <label htmlFor="year">Year of production</label>
+                <br />
+                <br />
                 <input
                     id="year"
                     type="number"
                     placeholder="yyyy"
                     onChange={handleTextChange}
                 />
-
+                <br />
+                <br />
                 <label htmlFor="color">Car Color</label>
+                <br />
+                <br />
                 <input
                     id="color"
                     type="text"
@@ -85,8 +98,13 @@ function PorscheEditForm() {
                 />
 
                 <br />
+                <br />
+                <br />
 
                 <label htmlFor="description">Give a Short Description</label>
+                <br />
+                <br />
+                <br />
                 <input
                     id="color"
                     type="description"
@@ -94,6 +112,8 @@ function PorscheEditForm() {
                     onChange={handleTextChange}
                 />
 
+                <br />
+                <br />
                 <br />
 
                 <input type="submit" />

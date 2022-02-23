@@ -47,8 +47,8 @@ function PorscheDetails() {
                         <Link to={`/porsches/${id}/edit`}>
                             <button>Edit</button>
                         </Link>
-                        <div>
-                            <button onClick={porscheDelete}>Delete</button>
+                        <div className="delete-bttn">
+                            <button onClick={porscheDelete}>Not interested in this car.</button>
                         </div>
                     </div>
 
