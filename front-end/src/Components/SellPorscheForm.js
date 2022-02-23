@@ -46,6 +46,7 @@ function SellPorscheForm() {
 
 
                     <label htmlFor="name">Model You're Selling (911 Carerra, 911 Turbo, etc) </label>
+                    <br />
                     <input
                         id="name"
                         value={porsche.name}
@@ -55,6 +56,7 @@ function SellPorscheForm() {
                     <br />
                     <br />
                     <label htmlFor="image">Add an Image</label>
+                    <br />
                     <input
                         id="image"
                         type="text"
@@ -65,6 +67,7 @@ function SellPorscheForm() {
                     <br />
                     <br />
                     <label htmlFor="year">Year of production</label>
+                    <br />
                     <input
                         id="year"
                         type="number"
@@ -74,6 +77,7 @@ function SellPorscheForm() {
                     <br />
                     <br />
                     <label htmlFor="color">Car Color</label>
+                    <br />
                     <input
                         id="color"
                         type="text"
@@ -85,6 +89,7 @@ function SellPorscheForm() {
                     <br />
 
                     <label htmlFor="description">Give a Short Description</label>
+                    <br />
                     <input
                         id="color"
                         type="description"
