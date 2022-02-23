@@ -1,5 +1,4 @@
 
-
 function Show() {
   return (
     <div className="show">
