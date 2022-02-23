@@ -27,38 +27,38 @@ function PorscheDetails() {
             })
     }
 
-    return (
-        <div>
-            <div className="Show-porsche">
-                <h1>{porsche.year}&nbsp;&nbsp;{porsche.name}</h1>
-                <img src={porsche.image} alt={porsche.name} />
-                <span><h6>Color:&nbsp;</h6>{porsche.color}</span>
-                <span><h6>Generation:&nbsp;</h6>{porsche.generation}</span>
-                <span><h6>Description:&nbsp;</h6></span>
-                <span><h6>Rating:&nbsp;</h6>{porsche.rating}/5</span>
-                <br />
-                {porsche.description}
+    return <article>
+    <div>
+        <div className="Show-porsche">
+            <h1>{porsche.year}&nbsp;&nbsp;{porsche.name}</h1>
+            <img src={porsche.image} alt={porsche.name} />
+            <span><h6>Color:&nbsp;</h6>{porsche.color}</span>
+            <span><h6>Generation:&nbsp;</h6>{porsche.generation}</span>
+            <span><h6>Description:&nbsp;</h6></span>
+            <span><h6>Rating:&nbsp;</h6>{porsche.rating}/5</span>
+            <br />
+            {porsche.description}
 
-                <div className="Navigation">
+            <div className="Navigation">
+                <div>
+                    <Link to="/porsches">
+                        <button>Back</button>
+                    </Link>
+                </div>
+                <div>
+                    <Link to={`/porsches/${id}/edit`}>
+                        <button>Edit</button>
+                    </Link>
                     <div>
-                        <Link to="/porsches">
-                            <button>Back</button>
-                        </Link>
+                        <button onClick={porscheDelete}>Delete</button>
                     </div>
-                    <div>
-                        <Link to={`/porsches/${id}/edit`}>
-                            <button>Edit</button>
-                        </Link>
-                        <div>
-                            <button onClick={porscheDelete}>Delete</button>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
+
         </div>
-    )
+    </div>
+    </article>
 
 }
 
