@@ -44,18 +44,17 @@ function SellPorscheForm() {
 
             <form onSubmit={handleSubmit}>
 
-                <label htmlFor="model">Model You're Selling</label>
-                <br />
+
+            <label htmlFor="name">Model You're Selling (911 Carerra, 911 Turbo, etc) </label>
                 <input
-                    id="model"
-                    value={porsche.model}
+                    id="name"
+                    value={porsche.name}
                     type="text"
                     onChange={handleTextChange}
                 />
-                <br />
-                <br />
+<br/>
+<br/>
                 <label htmlFor="image">Add an Image</label>
-                <br />
                 <input
                     id="image"
                     type="text"
@@ -63,24 +62,33 @@ function SellPorscheForm() {
                     placeholder="Image link"
                     onChange={handleTextChange}
                 />
-                <br />
-                <br />
+<br/>
+<br/>
                 <label htmlFor="year">Year of production</label>
-                <br />
                 <input
                     id="year"
                     type="number"
                     placeholder="yyyy"
                     onChange={handleTextChange}
                 />
-                <br />
-                <br />
+<br/>
+<br/>
                 <label htmlFor="color">Car Color</label>
-                <br />
                 <input
                     id="color"
                     type="text"
                     placeholder="Color"
+                    onChange={handleTextChange}
+                />
+<br/>
+<br/>
+                <br />
+
+                <label htmlFor="description">Give a Short Description</label>
+                <input
+                    id="color"
+                    type="description"
+                    placeholder="Insert a Short Description"
                     onChange={handleTextChange}
                 />
 
