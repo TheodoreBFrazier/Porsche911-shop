@@ -25,8 +25,8 @@ const createPorsche = async (porsche) => {
 
     try {
         const postedPorsche = await db.one(
-            "INSERT INTO porsches (model, year, color, generation, price, feature, is_new) VALUES($1, $2, $3, $4, $5, $6) RETURNING *",
-            [porsche.model, porsche.year, porsche.color, porsche.generation, porsche.price, porsche.feature, porsche.is_new]
+            "INSERT INTO porsches (name, image, year, color, description) VALUES($1, $2, $3, $4, $5) RETURNING *", INSERT
+            [porsche.name, porsche.image, porsche.year, porsche.color, porsche.description]
         )
         return postedPorsche;
     } catch (error) {
@@ -37,18 +37,32 @@ const createPorsche = async (porsche) => {
 const deletePorsche = async (id) => {
     try {
         const deletedPorsche = await db.one(
-            "DELETE FROM porsche WHERE id = $1 RETURNING *",
+            "DELETE FROM porsches WHERE id = $1 RETURNING *",
             id
         );
-        return deletedPorsche
+        return deletedPorsche;
     } catch (error) {
         return error;
     }
 }
 
+const updatePorsche = async (id, porsche) => {
+    try {
+        const updatedPorsche = await db.one(
+            "UPDATE porsches SET name=$1, image=$2, year=$3, color=$4, description=$5 WHERE id=$6 RETURNING *"
+            [porsche.name, porsche.image, porsche.year, porsche.color, porsche.description, id]
+        );
+        return updatedPorsche;
+    } catch (error) {
+        return error;
+    }
+}
+
+
 module.exports = {
     getAllPorsches,
     getPorsche,
     createPorsche,
-    deletePorsche
+    deletePorsche,
+    updatePorsche
 }

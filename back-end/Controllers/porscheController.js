@@ -1,6 +1,6 @@
 const express = require("express");
 const porsches = express.Router();
-const { getAllPorsches, getPorsche, createPorsche, deletePorsche } = require("../Queries/porsches")
+const { getAllPorsches, getPorsche, createPorsche, deletePorsche, updatePorsche } = require("../Queries/porsches")
 
 //REMEMBER TO RUN PSQL SEED AND SCHEMA COMMANDS!!!
 
@@ -50,13 +50,24 @@ porsches.post("/", async (request, response) => {
 })
 
 porsches.delete("/:id", async (request, response) => {
-const { id } = request.params;
-const deletedPorsche = await deletePorsche(id)
-if (deletedPorsche.id) {
-    response.status(200).json(deletedPorsche)
-} else {
-    response.status(404).json({error: "Porsche not found!"})
-}
+    const { id } = request.params;
+    const deletedPorsche = await deletePorsche(id)
+    if (deletedPorsche.id) {
+        response.status(200).json(deletedPorsche)
+    } else {
+        response.status(404).json({ error: "Porsche not found!" })
+    }
+})
+
+porsches.put("/:id", async(request, response) => {
+    const { id } = request.params;
+    const { body } = request;
+    const updatedPorsche = await updatePorsche(id, body);
+    if(updatedPorsche.id){
+     response.status(200).json(updatedPorsche)
+    } else {
+        response.status(404).json({error: "Porsche not found!"})
+    }
 })
 
 module.exports = porsches;

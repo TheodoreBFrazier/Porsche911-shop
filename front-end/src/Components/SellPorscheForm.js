@@ -8,10 +8,11 @@ function SellPorscheForm() {
     let navigate = useNavigate();
 
     const [porsche, setPorsche] = useState({
-        model: "",
+        name: "",
         image: "",
         year: 0,
         color: "",
+        description: "",
     })
 
 
