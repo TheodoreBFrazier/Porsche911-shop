@@ -37,69 +37,69 @@ function SellPorscheForm() {
     };
     return (
         <div className="form-box">
-        <div className="Sell">
+            <div className="Sell">
 
-            <h1>Need to part with your Porsche 911?</h1>
-            <h4>We know it's tough to part with your beloved Porsche 911, but enter the information <br /> about your car and we will find it a new home!</h4>
+                <h1>Need to part with your Porsche 911?</h1>
+                <h4>We know it's tough to part with your beloved Porsche 911, but enter the information <br /> about your car and we will find it a new home!</h4>
 
-            <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
 
 
-            <label htmlFor="name">Model You're Selling (911 Carerra, 911 Turbo, etc) </label>
-                <input
-                    id="name"
-                    value={porsche.name}
-                    type="text"
-                    onChange={handleTextChange}
-                />
-<br/>
-<br/>
-                <label htmlFor="image">Add an Image</label>
-                <input
-                    id="image"
-                    type="text"
-                    pattern="http[s]*//.+"
-                    placeholder="Image link"
-                    onChange={handleTextChange}
-                />
-<br/>
-<br/>
-                <label htmlFor="year">Year of production</label>
-                <input
-                    id="year"
-                    type="number"
-                    placeholder="yyyy"
-                    onChange={handleTextChange}
-                />
-<br/>
-<br/>
-                <label htmlFor="color">Car Color</label>
-                <input
-                    id="color"
-                    type="text"
-                    placeholder="Color"
-                    onChange={handleTextChange}
-                />
-<br/>
-<br/>
-                <br />
+                    <label htmlFor="name">Model You're Selling (911 Carerra, 911 Turbo, etc) </label>
+                    <input
+                        id="name"
+                        value={porsche.name}
+                        type="text"
+                        onChange={handleTextChange}
+                    />
+                    <br />
+                    <br />
+                    <label htmlFor="image">Add an Image</label>
+                    <input
+                        id="image"
+                        type="text"
+                        pattern="http[s]*//.+"
+                        placeholder="Image link"
+                        onChange={handleTextChange}
+                    />
+                    <br />
+                    <br />
+                    <label htmlFor="year">Year of production</label>
+                    <input
+                        id="year"
+                        type="number"
+                        placeholder="yyyy"
+                        onChange={handleTextChange}
+                    />
+                    <br />
+                    <br />
+                    <label htmlFor="color">Car Color</label>
+                    <input
+                        id="color"
+                        type="text"
+                        placeholder="Color"
+                        onChange={handleTextChange}
+                    />
+                    <br />
+                    <br />
+                    <br />
 
-                <label htmlFor="description">Give a Short Description</label>
-                <input
-                    id="color"
-                    type="description"
-                    placeholder="Insert a Short Description"
-                    onChange={handleTextChange}
-                />
+                    <label htmlFor="description">Give a Short Description</label>
+                    <input
+                        id="color"
+                        type="description"
+                        placeholder="Insert a Short Description"
+                        onChange={handleTextChange}
+                    />
 
-                <br />
-                <br />
-                <br />
+                    <br />
+                    <br />
+                    <br />
 
-                <input type="submit" />
+                    <input type="submit" />
 
-            </form>
-        </div>
+                </form>
+            </div>
         </div>
     );
 
