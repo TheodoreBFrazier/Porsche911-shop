@@ -1,10 +1,15 @@
 .generations-intro {
-    width: 400px;
+    margin: auto;
+    width: 800px;
     
 }
 
 .porsche-generation-container {
-    height: 400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 1000px;
+    background-color: grey;
 }
 
 .porsche-generation-container img {

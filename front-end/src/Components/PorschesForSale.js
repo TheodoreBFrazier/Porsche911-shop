@@ -8,7 +8,7 @@ function Porsches() {
     const [porsches, setPorsches] = useState([]) //State of empty array
 
     useEffect(() => {
-        axios.get(APT + "/porsches")
+        axios.get(API + "/porsches")
             .then((response) => {
                 setPorsches(response.data);
             }).catch((error) => {
@@ -27,7 +27,7 @@ function Porsches() {
                 </table>
                 <tbody>
                     {porsches.map((porsche) => {
-                        return <Porsche />
+                        return <Porsche4Sale key={porsche.id} porsche={porsche} />
                     })}
                 </tbody>
             </section>
