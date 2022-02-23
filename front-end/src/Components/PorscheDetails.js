@@ -12,11 +12,11 @@ function PorscheDetails() {
     useEffect(() => {
         axios.get(API + "/porsches/" + id)
             .then((response) => {
-                setPorsche(response.data)
+                setPorsche(response.data);
             }).catch((error) => {
-                console.log(error)
+                console.log(error);
             })
-    }), [id, API]
+    }, [id, API]);
 
     const porscheDelete = () => {
         axios.delete(API + "/porsches/" + id)
