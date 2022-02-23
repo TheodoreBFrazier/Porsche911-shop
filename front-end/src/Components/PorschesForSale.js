@@ -4,7 +4,7 @@ import  Porsche4Sale from "./Porsche4Sale";
 
 const API = process.env.REACT_APP_API_URL;
 
-function Porsches() {
+function PorschesForSale() {
     const [porsches, setPorsches] = useState([]) //State of empty array
 
     useEffect(() => {
@@ -37,4 +37,4 @@ function Porsches() {
 
 }
 
-export default Porsches;
+export default PorschesForSale;
