@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Porsche4Sale } from "./Porsche4Sale";
+import  Porsche4Sale from "./Porsche4Sale";
 
 const API = process.env.REACT_APP_API_URL;
 
