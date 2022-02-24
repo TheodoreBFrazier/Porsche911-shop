@@ -13,7 +13,7 @@ function SellPorscheForm() {
         year: 0,
         color: "",
         description: "",
-    })
+    });
 
 
     const sellPorsche = () => {
@@ -63,7 +63,8 @@ function SellPorscheForm() {
                     <input
                         id="image"
                         type="text"
-                        pattern="http[s]*//.+"
+                        pattern="http[s]://.+"
+                        value={porsche.image}
                         placeholder="Image link"
                         onChange={handleTextChange}
                     />
@@ -75,6 +76,7 @@ function SellPorscheForm() {
                     <input
                         id="year"
                         type="number"
+                        value={porsche.year}
                         placeholder="yyyy"
                         onChange={handleTextChange}
                     />
@@ -86,6 +88,7 @@ function SellPorscheForm() {
                     <input
                         id="color"
                         type="text"
+                        value={porsche.color}
                         placeholder="Color"
                         onChange={handleTextChange}
                     />
@@ -99,6 +102,7 @@ function SellPorscheForm() {
                     <input
                         id="color"
                         type="description"
+                        value={porsche.description}
                         placeholder="Insert a Short Description"
                         onChange={handleTextChange}
                     />
