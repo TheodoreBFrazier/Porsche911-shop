@@ -1,8 +1,10 @@
+import { TextField } from '@mui/material'
+import { Button } from '@mui/material';
 import React, { useState } from 'react'
-//Install EmailJS dependency
+//Install EmailJS dependency//
+//import emailjs, { init } from 'emailjs-com'
+//init('user_id')
 
-import emailjs, { init } from 'emailjs-com'
-init('user_id')
 
 const Contact = () => {
 
@@ -25,9 +27,9 @@ const Contact = () => {
             }
 
 
-            emailjs.send(serviceId, templateId, templateParams, userId)
-                .then(response => console.log(response))
-                .then(error => console.log(error))
+            //emailjs.send(serviceId, templateId, templateParams, userId)
+            //.then(response => console.log(response))
+            //.then(error => console.log(error))
 
             setEmail('');
             setEmail('')
@@ -39,18 +41,30 @@ const Contact = () => {
     }
 
     return (
+        
         <div className='contact-form'>
-            <form>
-                <label> Your Name </label>
-                <br />
-                <br />
-                <input
-                    type="text"
-                    placeholder="your name"
-                    value={name}
-                    onChange={event => setName(event.target.value)}
-                />
-                <br />
+                        <h1>Inquire</h1>
+
+            {/* <TextField
+                label="note-title"
+                /> */}
+
+            <br />
+            <br />
+            <TextField
+                label="Your Name"
+            />
+            <br/>
+            <TextField
+                label="Your E-mail"
+            />
+            <br>
+            </br>
+            <TextField
+                label="Your Message"
+            />
+            <Button variant="contained">Submit!!</Button>
+            {/* <br />
                 <br />
                 <label> Your Email </label>
                 <br />
@@ -75,8 +89,8 @@ const Contact = () => {
                 <br />
                 <button onClick={submit}>Inquire</button>
                 <br />
-                <span className={emailSent ? 'visible' : null}>Thank you for reaching out!!!</span>
-            </form>
+                <span className={emailSent ? 'visible' : null}>Thank you for reaching out!!!</span> */}
+
         </div>
     )
 }

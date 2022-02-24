@@ -16,7 +16,7 @@ function PorscheDetails() {
             }).catch((error) => {
                 console.log(error);
             })
-    }, [id, API]);
+    }, [id]);
 
     const porscheDelete = () => {
         axios.delete(API + "/porsches/" + id)
@@ -50,7 +50,7 @@ function PorscheDetails() {
                         </Link>
                     </div>
                     <div>
-                        <Link to="/porsches/contact">
+                        <Link to="/contact">
                             <button>interested? Reach out!</button>
                         </Link>
                     </div>

@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
+
 // IMPORT THE PAGES
 
 import Home from "./Pages/Home"
@@ -25,7 +26,7 @@ function App() {
           <Route exact path="/porsches/:id" element={<Show />} />
           <Route path="/porsches/:id/edit" element={<Edit />}/> 
           <Route path="porsches/generations" element={<Generations />} />
-          <Route path="porsches/contact" element={<Contact />} />
+          <Route path="contact" element={<Contact />} />
           </Routes>
         </main>
 
