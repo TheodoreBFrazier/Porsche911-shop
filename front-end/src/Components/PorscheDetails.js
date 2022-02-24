@@ -32,6 +32,7 @@ function PorscheDetails() {
             <div className="Show-porsche">
                 <h1>{porsche.year}&nbsp;&nbsp;{porsche.name}</h1>
                 <img src={porsche.image} alt={porsche.name} />
+                <h2>${porsche.price}.00</h2>
                 <h5>Color:&nbsp;{porsche.color}</h5>
                 <h5>Generation:&nbsp;{porsche.generation}</h5>
                 <h5>Rating:&nbsp;{porsche.rating}/5</h5>
@@ -47,12 +48,19 @@ function PorscheDetails() {
                         <Link to={`/porsches/${id}/edit`}>
                             <button>Edit</button>
                         </Link>
-                        <div className="delete-bttn">
-                            <button onClick={porscheDelete}>Not interested in this car.</button>
-                        </div>
+                    </div>
+                    <div>
+                        <Link to="/porsches/contact">
+                            <button>interested? Reach out!</button>
+                        </Link>
+                    </div>
+                    </div>
+                    <div className="delete-bttn">
+                        <button onClick={porscheDelete}>Not interested in this car.</button>
                     </div>
 
-                </div>
+
+            
 
             </div>
         </div>

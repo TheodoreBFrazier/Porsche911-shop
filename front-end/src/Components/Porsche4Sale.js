@@ -7,7 +7,7 @@ function Porsche4Sale({ porsche }) {
             <Link to={`/porsches/${porsche.id}`}>
                 <h1>{porsche.year}&nbsp;&nbsp;{porsche.name}</h1>
             </Link>
-           <h2> ${porsche.price} </h2>
+           <h2> ${porsche.price}.00 </h2>
         </div>
     )
 }

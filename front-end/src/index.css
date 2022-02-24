@@ -17,8 +17,8 @@ nav {
 
 
 nav button {
+  margin-right: 100px;
   color: white;
-  margin-left: 1175px;
   background-color: #000031;
 }
 
@@ -28,6 +28,10 @@ nav button a {
 
 a {
   text-decoration: none;
+}
+
+.home {
+margin-left: 100px;
 }
 
 
@@ -44,6 +48,12 @@ code {
     monospace;
 }
 
+.logo {
+  text-decoration: none;
+  color:black;
+  margin:600px;
+  text-align: center;
+}
 
 .Home img {
   position: absolute;
@@ -71,7 +81,7 @@ code {
   margin: auto;
   text-align: center;
   width: 700px;
-  height: 800px;
+  height: 1000px;
   padding: 20px;
   padding-top: 100px;
   background-color: rgba(0, 0, 0, 0.5);
@@ -101,7 +111,7 @@ code {
   margin: auto;
   text-align: center;
   width: 700px;
-  height: 800px;
+  height: 1000px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -198,11 +208,36 @@ button {
 }
 
 .porsche {
-  background-color: red;
   width: 700px;
 }
 
 .porsche h5 {
   margin: auto;
   width: 500px;
+}
+
+.contact-form {
+  margin: auto;
+  height:400px;
+  width: 900px;
+}
+
+.contact-form input {
+  width: 750px;
+  height: 50px;
+}
+
+.contact-form button {
+  margin:auto
+}
+
+.contact-form textarea {
+  width: 750px;
+  height: 300px;
+}
+
+
+.Navigation div {
+  display: inline-block;
+  margin: 50px;
 }

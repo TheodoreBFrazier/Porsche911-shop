@@ -17,9 +17,12 @@ class PorscheGenerations extends Component {
         let allGensArr = this.state.porscheInfo.map((porsche) => {
             return (
                 <div className="porsche">
-                    <div>{porsche.generation}</div>
+                    <div><h1>{porsche.generation}</h1></div>
                     <div>{porsche.years}</div>
+                    <br/>
                     <img src={porsche.img} alt="Image of the porsche genertion" />
+                    <br/>
+                    <br/>
                     <h5>{porsche.description}</h5>
                 </div>
             )

@@ -13,6 +13,7 @@ function SellPorscheForm() {
         year: 0,
         color: "",
         description: "",
+        price: 0,
     });
 
 
@@ -110,6 +111,22 @@ function SellPorscheForm() {
                         value={porsche.color}
                         type="text"
                         placeholder="Insert a Short Description"
+                        onChange={handleTextChange}
+                        required
+                    />
+
+                    <br />
+                    <br />
+                    <br />
+
+                    <label htmlFor="price">How much do you want for it?</label>
+                    <br />
+                    <br />
+                    <input
+                        id="price"
+                        value={porsche.price}
+                        type="number"
+                        placeholder="000000 USD"
                         onChange={handleTextChange}
                         required
                     />
