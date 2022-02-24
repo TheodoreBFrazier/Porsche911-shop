@@ -1,7 +1,13 @@
-# PERN Final Project Template!!
+
 This is a app devoted to the best car in the world. The Porsche 911!!
 
+BACKEND:
+
 https://tf-cta-backend.herokuapp.com/
+
+FRONTEND:
+
+https://blissful-joliot-fb89b6.netlify.app/
 
 - select `use this template`
 - clone this repo
