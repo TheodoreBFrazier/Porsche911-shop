@@ -1,3 +1,8 @@
+DROP DATABASE IF EXISTS porsche_dev;
+CREATE DATABASE porsche_dev;
+
+\c porsche_dev;
+
 CREATE TABLE porsches (
     id SERIAL PRIMARY KEY, 
     name TEXT, 
@@ -11,4 +16,3 @@ CREATE TABLE porsches (
     is_new BOOLEAN,
     rating INTEGER
 );
-
