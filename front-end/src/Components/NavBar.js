@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export default function NavBar() {
     return (
-        <nav>
+        <nav className="navigation">
             <Link to="/">
-Home
+                Home
             </Link>
             <h1>
                 <Link to="/porsches">Porsches!</Link>

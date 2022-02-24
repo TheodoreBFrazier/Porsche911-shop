@@ -8,9 +8,35 @@ body {
 }
 
 nav {
-  background-color: silver;
+  
+  height: 125px;
+  background-color: white;
   display: flex;
   align-items: center;
+}
+
+
+nav button {
+  color: white;
+  margin-left: 1175px;
+  background-color: navy;
+}
+
+nav button a {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+nav button {
+  text-decoration: none;
+}
+
+link {
+text-decoration: none;
 }
 
 code {
@@ -22,9 +48,8 @@ code {
 .Home img {
   position: absolute;
   width: 100vw;
-  z-index: -1;
+  z-index: -2;
 }
-
 
 
 .Sell { 
@@ -90,9 +115,14 @@ code {
   z-index: -1;
 }
 
+.porscheforsale {
+  margin-top: 300px;
+}
+
+
 .porscheforsale img {
 margin: auto;
-  height: 300px;
+  height: 400px;
 }
 
 .Index-intro {
@@ -106,16 +136,16 @@ margin: auto;
   grid-template-columns: 1fr 1fr;
 }
 
-.Show {
-  margin: auto;
-  height: 900px;
-  width: 900px;
+.Index-intro {
+  height: 200px;
+  background-color: bisque;
+  margin-bottom: 40px;
 }
 
 .Show img {
   position: relative;
   margin: auto;
-  height: 450px;
+  height: 400px;
 }
 
 button {
@@ -131,4 +161,24 @@ button {
   border-radius: 10px;
   border-style: none;
   background-color: red;
+}
+
+.Navigation Link:button {
+  display: inline-block;
+}
+
+.Show-porsche {
+  text-align: center;
+}
+
+.generation-intro {
+  padding: 75px;
+  height: 200px;
+}
+
+.porsche-generation-container {
+  text-align: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

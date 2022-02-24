@@ -7,9 +7,8 @@
 .porsche-generation-container {
     margin: auto;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    width: 1000px;
-    background-color: grey;
+    grid-template-columns: 1fr 1fr;
+    width: 1500px;
 }
 
 .porsche-generation-container img {
