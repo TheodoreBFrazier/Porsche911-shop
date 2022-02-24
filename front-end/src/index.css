@@ -73,6 +73,7 @@ code {
   width: 700px;
   height: 800px;
   padding: 20px;
+  padding-top: 100px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
@@ -151,9 +152,8 @@ margin: auto;
 }
 
 .Index-intro {
+  margin-top: 50px;
   height: 200px;
-  background-color: bisque;
-  margin-bottom: 40px;
 }
 
 .Show img {
