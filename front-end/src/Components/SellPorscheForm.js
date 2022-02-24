@@ -16,7 +16,7 @@ function SellPorscheForm() {
     });
 
 
-    const sellPorsche = () => {
+    const sellPorsche = (porsche) => {
         axios
             .post(`${API}/porsches`, porsche)
             .then(
@@ -34,8 +34,9 @@ function SellPorscheForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        sellPorsche()
+        sellPorsche();
     };
+
     return (
         <div className="form-box">
             <div className="Sell">
@@ -54,6 +55,7 @@ function SellPorscheForm() {
                         value={porsche.name}
                         type="text"
                         onChange={handleTextChange}
+                        required
                     />
                     <br />
                     <br />
@@ -64,9 +66,9 @@ function SellPorscheForm() {
                         id="image"
                         type="text"
                         pattern="http[s]://.+"
-                        value={porsche.image}
                         placeholder="Image link"
                         onChange={handleTextChange}
+                        required
                     />
                     <br />
                     <br />
@@ -76,9 +78,9 @@ function SellPorscheForm() {
                     <input
                         id="year"
                         type="number"
-                        value={porsche.year}
                         placeholder="yyyy"
                         onChange={handleTextChange}
+                        required
                     />
                     <br />
                     <br />
@@ -88,9 +90,9 @@ function SellPorscheForm() {
                     <input
                         id="color"
                         type="text"
-                        value={porsche.color}
                         placeholder="Color"
                         onChange={handleTextChange}
+                        required
                     />
                     <br />
                     <br />
@@ -102,9 +104,9 @@ function SellPorscheForm() {
                     <input
                         id="description"
                         type="text"
-                        value={porsche.description}
                         placeholder="Insert a Short Description"
                         onChange={handleTextChange}
+                        required
                     />
 
                     <br />

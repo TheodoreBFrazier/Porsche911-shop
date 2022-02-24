@@ -5,6 +5,7 @@ import { useParams, Link, useNavigate } from "react-router-dom"
 
 const API = process.env.REACT_APP_API_URL;
 
+
 function PorscheEditForm() {
     let { id } = useParams();
     let navigate = useNavigate();
@@ -20,32 +21,32 @@ function PorscheEditForm() {
 
     const updatePorsche = (updatedPorsche) => {
         axios
-            .post(`${API}/porsches/${id}`, updatedPorsche)
-            .then(
-                () => {
-                    navigate(`/porsches/${id}`);
-                },
-                (error) => console.log(error)
-            )
+            .put(`${API}/porsches/${id}`, updatedPorsche)
+            .then((response) => {
+                setPorsche(response.data);
+                navigate(`/porsches/${id}`);
+            })
             .catch((c) => console.warn("catch", c))
-    }
+    };
 
     const handleTextChange = (event) => {
         setPorsche({ ...porsche, [event.target.id]: event.target.value });
     };
 
-
     useEffect(() => {
-        axios.get(`${API}/porsches/${id}`).then(
-            (response) => setPorsche(response)
-        ).catch(() => navigate("/no-porsche-found"))
-    }, [id, navigate]);
+        axios.get(`${API}/porsches/${id}`)
+            .then((response) => {
+                setPorsche(response.data);
+            })
+            .catch((error) => console.error(error))
+    }, [id]);
 
 
     const handleSubmit = (event) => {
         event.preventDefault();
         updatePorsche(porsche)
     };
+    
     return (
         <div className="Edit">
 
@@ -69,9 +70,9 @@ function PorscheEditForm() {
                 <br />
                 <input
                     id="image"
+                    value={porsche.image}
                     type="text"
                     pattern="http[s]*://.+"
-                    placeholder="Image link"
                     onChange={handleTextChange}
                 />
                 <br />
@@ -81,8 +82,8 @@ function PorscheEditForm() {
                 <br />
                 <input
                     id="year"
+                    value={porsche.year}
                     type="number"
-                    placeholder="yyyy"
                     onChange={handleTextChange}
                 />
                 <br />
@@ -92,8 +93,8 @@ function PorscheEditForm() {
                 <br />
                 <input
                     id="color"
+                    value={porsche.color}
                     type="text"
-                    placeholder="Color"
                     onChange={handleTextChange}
                 />
 
@@ -107,8 +108,8 @@ function PorscheEditForm() {
                 <br />
                 <input
                     id="color"
+                    value={porsche.description}
                     type="description"
-                    placeholder="Insert a Short Description"
                     onChange={handleTextChange}
                 />
 
