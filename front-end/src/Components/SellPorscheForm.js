@@ -100,8 +100,8 @@ function SellPorscheForm() {
                     <br />
                     <br />
                     <input
-                        id="color"
-                        type="description"
+                        id="description"
+                        type="text"
                         value={porsche.description}
                         placeholder="Insert a Short Description"
                         onChange={handleTextChange}
