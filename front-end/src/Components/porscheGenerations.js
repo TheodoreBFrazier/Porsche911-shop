@@ -19,8 +19,8 @@ class PorscheGenerations extends Component {
                 <div className="porsche">
                     <div>{porsche.generation}</div>
                     <div>{porsche.years}</div>
-                    <img src={porsche.img} alt="Image of the porsche genration" />
-                    <div>{porsche.description}</div>
+                    <img src={porsche.img} alt="Image of the porsche genertion" />
+                    <h5>{porsche.description}</h5>
                 </div>
             )
         })

@@ -19,7 +19,7 @@ nav {
 nav button {
   color: white;
   margin-left: 1175px;
-  background-color: navy;
+  background-color: #000031;
 }
 
 nav button a {
@@ -181,4 +181,14 @@ button {
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.porsche {
+  background-color: red;
+  width: 700px;
+}
+
+.porsche h5 {
+  margin: auto;
+  width: 500px;
 }
