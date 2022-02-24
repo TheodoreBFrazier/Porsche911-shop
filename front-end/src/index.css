@@ -52,6 +52,18 @@ code {
 }
 
 
+.Home {
+  height: 350px;
+  width: 300px;
+}
+
+
+.Home-data {
+  position: absolute;
+  margin-top: 50px;
+  text-align: center;
+}
+
 .Sell { 
   color: white;
   margin: auto;
