@@ -16,7 +16,7 @@ function SellPorscheForm() {
     });
 
 
-    const sellPorsche = (porsche) => {
+    const sellPorsche = () => {
         axios
             .post(`${API}/porsches`, porsche)
             .then(
@@ -55,6 +55,7 @@ function SellPorscheForm() {
                         value={porsche.name}
                         type="text"
                         onChange={handleTextChange}
+                        placeholder="model name"
                         required
                     />
                     <br />
@@ -64,6 +65,7 @@ function SellPorscheForm() {
                     <br />
                     <input
                         id="image"
+                        value={porsche.image}
                         type="text"
                         pattern="http[s]://.+"
                         placeholder="Image link"
@@ -77,6 +79,7 @@ function SellPorscheForm() {
                     <br />
                     <input
                         id="year"
+                        value={porsche.year}
                         type="number"
                         placeholder="yyyy"
                         onChange={handleTextChange}
@@ -89,6 +92,7 @@ function SellPorscheForm() {
                     <br />
                     <input
                         id="color"
+                        value={porsche.color}
                         type="text"
                         placeholder="Color"
                         onChange={handleTextChange}
@@ -103,6 +107,7 @@ function SellPorscheForm() {
                     <br />
                     <input
                         id="description"
+                        value={porsche.color}
                         type="text"
                         placeholder="Insert a Short Description"
                         onChange={handleTextChange}
