@@ -36,7 +36,7 @@ porsches.get("/:id", async (request, response) => {
 })
 
 porsches.post("/", async (request, response) => {
-    const { body } = request;
+    const { body } = request
     try {
         const createdPorsche = await createPorsche(body);
         if (createdPorsche.id) {
@@ -59,15 +59,14 @@ porsches.delete("/:id", async (request, response) => {
     }
 })
 
-porsches.put("/:id", async(request, response) => {
+porsches.put("/:id", async (request, response) => {
     const { id } = request.params;
-    const { body } = request;
-    const updatedPorsche = await updatePorsche(id, body);
-    if(updatedPorsche.id){
-     response.status(200).json(updatedPorsche)
+    const updatedPorsche = await updatePorsche(id, request.body);
+    if (updatedPorsche.id) {
+        response.status(200).json(updatedPorsche);
     } else {
-        response.status(404).json({error: "Porsche not found"})
+        response.status(400).json("Not found!!")
     }
-})
+});
 
 module.exports = porsches;
