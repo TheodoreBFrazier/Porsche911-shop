@@ -1,5 +1,4 @@
-import { TextField } from '@mui/material'
-import { Button } from '@mui/material';
+import { TextField, Button } from '@mui/material'
 import React, { useState } from 'react'
 //Install EmailJS dependency//
 //import emailjs, { init } from 'emailjs-com'
@@ -8,42 +7,54 @@ import React, { useState } from 'react'
 
 const Contact = () => {
 
-    //Setting state for the form
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('')
-    const [emailSent, setEmailSent] = useState(false);
+    const [name, setName] = useState("")
+    const [message, setMessage] = useState("");
 
-    const submit = () => {
+    //Error handling
+    const [errorMessages, setErrorMessages] = useState([]);
+    const [showErrors, setShowErrors] = useState(false);
 
-        if (name && email & message) {
-            const serviceId = 'service_id';
-            const templateId = 'template_id';
-            const userId = 'user_id';
-            const templateParams = {
-                name,
-                email,
-                message,
-            }
+    // ---- Errors 
 
+    let errors = []
 
-            //emailjs.send(serviceId, templateId, templateParams, userId)
-            //.then(response => console.log(response))
-            //.then(error => console.log(error))
+    const formValid = () => {
 
-            setEmail('');
-            setEmail('')
-            setMessage('')
-            setEmailSent(true)
-        } else {
-            alert('Please fill out all fields')
+        //initialize errorMessage as an empty array 
+        setErrorMessages([])
+
+        //Check if name, massage and form is valid
+        //if name doesn't equal string
+        const isNameValid = (name !== "");
+        const isMessageValid = (message !== "");
+
+        if (!isNameValid) {
+            //If name not valid push Name not valid into the array
+            errors.push("Name not valid.")
+        }
+
+        if (!isMessageValid) {
+            errors.push("Message is not valid")
+        }
+
+        //If the length of the errors array is greater than one (meaning there is an error)
+        if (errors.length > 0) {
+            //Show errors is true because there is an error
+            setShowErrors({ showErrors: true });
+            //set error messages to the errors in the array we accumalted and show below
+            setErrorMessages(errors)
+        }
+        else {
+            setShowErrors({ showErrors: false });
+            alert("Your Message has been sent we will contact you shortly!")
         }
     }
 
+
     return (
-        
+
         <div className='contact-form'>
-                        <h1>Inquire</h1>
+            <h1>Inquire</h1>
 
             {/* <TextField
                 label="note-title"
@@ -51,20 +62,28 @@ const Contact = () => {
 
             <br />
             <br />
-            <TextField
-                label="Your Name"
-            />
-            <br/>
-            <TextField
-                label="Your E-mail"
-            />
-            <br>
-            </br>
-            <TextField
-                label="Your Message"
-            />
-            <Button variant="contained">Submit!!</Button>
-            {/* <br />
+            <form>
+                <TextField
+                    label="Your Name"
+                    type="text"
+                    onChange={event => setName({ name: event.target.value })}
+                />
+                <br />
+                <br />
+                <TextField
+                    label="Your Message"
+                    type="text"
+                    onChange={event => setMessage({ message: event.target.value })}
+                />
+                <br />
+                <br />
+                {showErrors ? errorMessages.map((item, index) => {
+                    return <ul key={index}>{item}</ul>;
+                }) : null
+                }
+
+                < Button color="primary" type="button" onClick={formValid}> Submit!!</Button>
+                {/* <br />
                 <br />
                 <label> Your Email </label>
                 <br />
@@ -90,8 +109,8 @@ const Contact = () => {
                 <button onClick={submit}>Inquire</button>
                 <br />
                 <span className={emailSent ? 'visible' : null}>Thank you for reaching out!!!</span> */}
-
-        </div>
+            </form>
+        </div >
     )
 }
 
